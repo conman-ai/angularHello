@@ -16,7 +16,7 @@ pipeline {
 
         sh '''
 
-          nmp --version
+          npm --version
 
         '''
 
