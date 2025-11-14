@@ -18,9 +18,9 @@ pipeline {
           }
           steps{
 
-            sh """"
+            sh '''
               echo 'ready for deploy'
-            """
+            '''
            }
          
       }
