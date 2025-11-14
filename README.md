@@ -1,6 +1,7 @@
 # Trex
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.7.
+This project is made to have hands on practice on setting up multibranch pipeline in Jenkins
 
 ## Development server
 
