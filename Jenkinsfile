@@ -8,27 +8,7 @@ pipeline {
 
   }
 
-  stages {
-
-    stage('Hello') {
-
-      steps {
-
-        sh '''
-
-          npm --version
-
-        '''
-
-      }
-
-    }
-
-  }
-
-}
-    stages{
-        stage("build"){
+stage("build"){
             steps{
               sh """ 
                 npm install
