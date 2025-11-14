@@ -7,7 +7,7 @@ pipeline {
     buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
 
   }
-
+stages{
 stage("build"){
             steps{
               sh """ 
@@ -25,4 +25,7 @@ stage("build"){
            """
         }
     }
+  
+}
+
 }
