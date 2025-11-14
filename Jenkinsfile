@@ -1,29 +1,15 @@
 pipeline {
-
-  agent any
-
-  options {
-
-    buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
-
-  }
-
-  stages {
-
-    stage('Hello') {
-
-      steps {
-
-        sh '''
-
-          npm --version
-
-        '''
-
-      }
-
+    agent any
+    tools{
+      nodejs 'Nodejs Local installation'
     }
-
-  }
-
+    stages{
+        stage("build"){
+            steps{
+              sh """ 
+                npm --version
+              """  
+            }
+        }
+    }
 }
