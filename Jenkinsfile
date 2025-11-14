@@ -6,9 +6,9 @@ pipeline {
 
     buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
 
-  }
-stages{
-stage("build"){
+    }
+  stages{
+    stage("build"){
             steps{
               sh """ 
                 npm install
@@ -20,12 +20,13 @@ stage("build"){
           when {
             branch 'main'
           }
-          sh """
+          steps{
+            sh """
             echo 'ready to deploy'
            """
+          }
+          
         }
     }
   
-}
-
 }
