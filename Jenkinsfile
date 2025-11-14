@@ -14,6 +14,9 @@ pipeline {
     }
   stages{
     stage("build"){
+	when{
+	   branch 'develop'
+	}
             steps{
               sh """ 
                 npm install
