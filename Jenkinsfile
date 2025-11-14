@@ -23,12 +23,10 @@ pipeline {
       }
 
     }
-<<<<<<< HEAD
 
   }
 
 }
-=======
     stages{
         stage("build"){
             steps{
@@ -48,4 +46,3 @@ pipeline {
         }
     }
 }
->>>>>>> b8d4b4f (added deploy code for main branch on jenkinsfile)
