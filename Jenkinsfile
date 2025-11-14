@@ -21,12 +21,12 @@ pipeline {
             branch 'main'
           }
           steps{
-            sh """
-            echo 'ready to deploy'
-           """
-          }
-          
-        }
-    }
-  
+
+            sh """"
+              echo 'ready for deploy'
+            """
+           }
+         
+      }
+  }
 }
