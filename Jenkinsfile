@@ -16,9 +16,14 @@ pipeline {
           when {
             branch 'main'
           }
-          sh """
-            echo 'ready to deploy'
-           """
-        }
+          steps{
+
+            sh """"
+              echo 'ready for deploy'
+            """
+            
+            
+          }
+         
     }
 }
