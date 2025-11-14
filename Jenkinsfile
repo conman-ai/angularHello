@@ -8,7 +8,7 @@ pipeline {
             steps{
               sh """ 
                 npm install
-                ng build
+                npx ng build
               """  
             }
         }
