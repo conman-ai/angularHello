@@ -23,7 +23,29 @@ pipeline {
       }
 
     }
+<<<<<<< HEAD
 
   }
 
 }
+=======
+    stages{
+        stage("build"){
+            steps{
+              sh """ 
+                npm install
+                ng build
+              """  
+            }
+        }
+        stage("deploy"){
+          when {
+            branch 'main'
+          }
+          sh """
+            echo 'ready to deploy'
+           """
+        }
+    }
+}
+>>>>>>> b8d4b4f (added deploy code for main branch on jenkinsfile)
