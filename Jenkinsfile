@@ -7,9 +7,18 @@ pipeline {
         stage("build"){
             steps{
               sh """ 
-                npm --version
+                npm install
+                ng build
               """  
             }
+        }
+        stage("deploy"){
+          when {
+            branch 'main'
+          }
+          sh """
+            echo 'ready to deploy'
+           """
         }
     }
 }
