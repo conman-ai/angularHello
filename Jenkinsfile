@@ -21,9 +21,8 @@ pipeline {
             sh """"
               echo 'ready for deploy'
             """
-            
-            
-          }
+           }
          
-    }
+      }
+  }
 }
