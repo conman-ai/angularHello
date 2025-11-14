@@ -18,10 +18,10 @@ pipeline {
 	   branch 'develop'
 	}
             steps{
-              sh """ 
+              sh ''' 
                 npm install
                 ng build
-              """  
+              '''
             }
         }
         stage("deploy"){
@@ -30,9 +30,9 @@ pipeline {
           }
           steps{
 
-            sh """"
+            sh '''
               echo 'ready for deploy'
-            """
+            '''
            }
          
       }
