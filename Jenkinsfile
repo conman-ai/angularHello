@@ -1,15 +1,27 @@
 pipeline {
-    agent any
-    tools{
-      nodejs 'Nodejs Local installation'
+
+  agent any
+
+  tools{
+	nodejs 'Nodejs Local installation'
+
+  }
+
+  options {
+
+    buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')
+
     }
-    stages{
-        stage("build"){
+  stages{
+    stage("build"){
+	when{
+	   branch 'develop'
+	}
             steps{
-              sh """ 
+              sh ''' 
                 npm install
-                npx ng build
-              """  
+                ng build
+              '''
             }
         }
         stage("deploy"){
